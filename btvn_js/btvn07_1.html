@@ -1,0 +1,57 @@
+	<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Thực hiện các phép tính tại đây: </h1>
+<input type="number" id="input_a">
+		</br>
+		</br>
+<input type="number" id="input_b">
+		<br>
+		<br>
+	<button onclick="suprise('cong')">Cộng</button>
+	<button onclick="suprise('tru')">Trừ</button>
+	<button onclick="suprise('nhan')">Nhân</button>
+	<button onclick="suprise('chia')">Chia</button>
+	<br>
+	<br>
+
+		<div> Kết quả: <span id="ket_qua"></span></div>
+<script>
+			var a,b,c;
+function getInput() {
+	a = parseInt(document.getElementById('input_a').value);
+	b = parseInt(document.getElementById('input_b').value);
+}
+
+function showKetQua(x) {
+	document.getElementById('ket_qua').innerHTML = x;
+}
+function suprise(phep_tinh) {
+	getInput();
+	switch(phep_tinh){
+		case "cong":
+			c = a + b;
+			break;
+		case "tru":
+			c = a - b;
+			break;
+		case "nhan":
+			c = a * b;
+			break;
+		case "chia":
+			if(b==0){
+				c = "Khong chia duoc"
+			} else {	
+				c = a / b;
+			}
+			break;
+	}
+	var x = c
+	showKetQua(x);
+}
+</script>
+</body>
+</html>

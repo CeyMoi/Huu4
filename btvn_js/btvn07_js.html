@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1> Mời nhập vào 1 số: </h1> 
+<input type="number" id="so_nt">
+<br>
+<br>
+<button onclick="showKq()">Kiểm tra</button>
+<br>
+<br>
+<div>Kết quả: <span id="ket_qua"></span></div>
+<script>
+	function showKq() {
+		var n = document.getElementById("so_nt").value
+		console.log(n)
+		 if ( n % 2 == 0){
+                let kq = 	"Số bạn nhập là số chẵn"
+                document.getElementById('ket_qua').innerHTML = kq;	
+                console.log("chan")
+            } else {
+            	let kq1 = 	"Số bạn nhập là số lẻ"
+                document.getElementById('ket_qua').innerHTML = kq1;
+                  console.log("le")
+            }
+
+	}
+</script>
+</body>
+</html>
